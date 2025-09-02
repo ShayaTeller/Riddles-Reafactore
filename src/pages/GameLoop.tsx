@@ -34,6 +34,6 @@ const q = questions[i]
   return (
     <>
     <h1>hello</h1>
-     <RiddleCard description={q.description} answer={q.answer} timelimit={q.timelimit} name={q.name} setNextRiddle={nextriddle}/>
+     <RiddleCard description={q.description} answer={q.answer} name={q.name} setNextRiddle={nextriddle}/>
     </>
   );}
