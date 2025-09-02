@@ -3,8 +3,6 @@ import RiddleCard from '../components/RiddleCard'
 export default function GameLoop() {
     const [corecctAnswer,SetCorrectAnswer] = useState<boolean>(false)
     const nextriddle = (s:boolean)=>SetCorrectAnswer(s);
-    const [answeringRiddels,SetansweringRiddles] = useState([])
-    const asweringRiddles = (a)=>SetansweringRiddles(a)
     if(corecctAnswer){
         return
     }
@@ -36,6 +34,6 @@ const q = questions[i]
   return (
     <>
     <h1>hello</h1>
-     <RiddleCard description={q.description} answer={q.answer} timelimit={q.timelimit} name={q.name} setNextRiddle={nextriddle} answeringRiddles={asweringRiddles}/>
+     <RiddleCard description={q.description} answer={q.answer} timelimit={q.timelimit} name={q.name} setNextRiddle={nextriddle}/>
     </>
   );}

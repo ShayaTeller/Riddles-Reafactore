@@ -6,14 +6,13 @@ export default function RiddleCard({
   timelimit,
   name,
   setNextRiddle,
-  answeringRiddles
+  
 }: {
   description: string;
   answer: string;
   timelimit: number;
   name: string;
-  setNextRiddle:()=>void;
-  answeringRiddles:()=>void
+  setNextRiddle:(b:boolean)=>void;
 }) {
 
   const [playerAnswer, SetPlayerAnswer] = useState<string | null>(null);
@@ -31,7 +30,6 @@ export default function RiddleCard({
           if(playerAnswer==answer){
             SetMessegeForClient("good answer")
             setNextRiddle(true)
-            answeringRiddles(description)
             return
           }
         }}/>
