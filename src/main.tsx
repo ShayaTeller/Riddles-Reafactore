@@ -8,6 +8,7 @@ import SignIn from "./pages/SignIn.tsx";
 import SignUp from "./pages/SignUp.tsx";
 import Guest from "./pages/Guest.tsx";
 import GameLoop from "./pages/GameLoop.tsx";
+import Menu from "./pages/Menu.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="guest" element={<Guest />} />
         <Route path="startgame" element={<GameLoop />} />
         <Route path="loadboard" element={<h1>not found</h1>} />
+        <Route path="menu" element={<Menu/>}/>
       </Routes>
     </StrictMode>
   </BrowserRouter>

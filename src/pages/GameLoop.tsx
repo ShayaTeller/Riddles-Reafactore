@@ -1,36 +1,19 @@
 import { useState } from 'react';
 import RiddleCard from '../components/RiddleCard'
+import {questionsExampel}  from '../utils/riddlesExsampel'
 export default function GameLoop() {
+
     const [corecctAnswer,SetCorrectAnswer] = useState<boolean>(false)
     const nextriddle = (s:boolean)=>SetCorrectAnswer(s);
-    if(corecctAnswer){
-        return
-    }
-    
-    
-    const questions = [
-  {
-    description: "5+5?",
-    answer: "10",
-    timelimit: 1,
-    name: "math"
-  },
-  {
-    description: "8-3?",
-    answer: "5",
-    timelimit: 1,
-    name: "math"
-  },
-  {
-    description: "6*2?",
-    answer: "12",
-    timelimit: 1,
-    name: "math"
-  }
-];
 
-const i = Math.floor(Math.random() * questions.length)
+  
+    console.log(corecctAnswer)
+    
+    const questions = questionsExampel;
+
+const i = 0
 const q = questions[i]
+
   return (
     <>
     <h1>hello</h1>

@@ -1,8 +1,21 @@
+html{
+  background-image: url('./assets/homepage.jpg') ;
+   background-size: cover;       /* ממלא את כל המסך, חותך אם צריך */
+  background-repeat: no-repeat; /* שלא יחזור */
+  background-position: center;  
+  
+
+
+}
 #root {
+
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+.homePage{
+  background-image: url('./assets/homepage.jpg');
 }
 
 .logo {
