@@ -3,14 +3,12 @@ import { useState } from "react";
 export default function RiddleCard({
   description,
   answer,
-  timelimit,
   name,
   setNextRiddle,
   
 }: {
   description: string;
   answer: string;
-  timelimit: number;
   name: string;
   setNextRiddle:(b:boolean)=>void;
 }) {
