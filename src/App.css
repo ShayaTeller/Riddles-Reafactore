@@ -7,6 +7,35 @@ html{
 
 
 }
+
+.homepage{
+
+}
+.login{
+  background-color: #888;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+    gap: 10px;}
+
+#show-riddle{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 50vo;
+  margin: 10px;
+  background-color: aqua;
+  border: 2px solid black;
+
+}
+
+.login>input{
+  display: flex;
+  background-color: aliceblue;
+}
+.signup{
+
+}
 #root {
 
   max-width: 1280px;
