@@ -1,8 +1,13 @@
-import { useEffect, useState } from "react";
-import type { riddle } from "../utils/riddlesExsampel";
+import { useContext, useEffect, useState } from "react";
+// import type { riddle } from "../utils/riddlesExsampel";
+import { riddlesontext } from "../contexts/stroe";
+import type { IRiddlesContext } from "../contexts/Riddles.context copy";
 // import {questionsExampel} from '../utils/riddlesExsampel'
 export default function ReadAllRiddles() {
-  const [riddles, SetRiddles] = useState<riddle[]>([]);
+
+  const {riddles, setRiddles} = useContext<IRiddlesContext>(riddlesontext);
+
+  // const [riddles, SetRiddles] = useState<riddle[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -11,7 +16,8 @@ export default function ReadAllRiddles() {
         const res = await fetch("http://localhost:3002/riddles");
         if (!res.ok) throw new Error("Failed to fetch riddles");
         const data = await res.json();
-        SetRiddles(data);
+        console.log(data)
+        setRiddles(data);
       } catch (err) {
         console.error(err);
       } finally {

@@ -1,39 +1,16 @@
-import { useState } from "react";
+// import { useState } from "react";
+// import type { riddle } from "../utils/riddlesExsampel";
 
-export default function RiddleCard({
-  description,
-  answer,
-  name,
-  setNextRiddle,
-  
-}: {
-  description: string;
-  answer: string;
-  name: string;
-  setNextRiddle:(b:boolean)=>void;
-}) {
+// export default function RiddleCard({name,taskDescription,correctAnswer,timelimit}:riddle) {
 
-  const [playerAnswer, SetPlayerAnswer] = useState<string | null>(null);
-  const [MessegeForClient, SetMessegeForClient] = useState<string | null>(null);
+//   const [playerAnswer, SetPlayerAnswer] = useState<string | null>(null);
+//   const [MessegeForClient, SetMessegeForClient] = useState<string | null>(null);
 
-  return (
-    <>
-      <div className="riddle-card">
-        <p>{description}</p>
-        <input type="text" name="clientanswer" onChange={(e)=>{SetPlayerAnswer(e.target.value)}} />answer
-        <input type="submit" onClick={()=>{
-          if(playerAnswer!=answer){
-            SetMessegeForClient("try agen")
-          }
-          if(playerAnswer==answer){
-            SetMessegeForClient("good answer")
-            setNextRiddle(true)
-            return
-          }
-        }}/>
-        <p>{MessegeForClient}</p>
-        <p>{name}</p>
-      </div>
-    </>
-  );
-}
+//   return (
+//     <div>
+
+
+//     </div>
+    
+//   );
+// }

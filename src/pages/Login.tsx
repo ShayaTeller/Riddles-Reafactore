@@ -1,7 +1,10 @@
-import { useRef } from "react";
+import {  useContext, useRef } from "react";
 import { useNavigate } from "react-router";
-
+import {context, rolecontext} from '../contexts/stroe'
 export default function Login() {
+
+  const {setUser} = useContext(context)
+  const {setRole} = useContext(rolecontext)
 
   const navigate = useNavigate();
   const FormRef = useRef<HTMLFormElement>(null);
@@ -17,10 +20,14 @@ export default function Login() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
+      cache:'no-cache',
       credentials: "include",
     });
     if(res.ok){
-        navigate('/menu')
+      const data = await res.json()
+      setUser(data.player[0].username)
+      setRole(data.player[0].role)
+      navigate('/menu')
     }
     else{
       console.error("login faild")

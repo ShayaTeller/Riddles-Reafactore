@@ -1,14 +1,16 @@
 import { Outlet } from "react-router";
+import NavBar from "../components/NavBar";
 
 export default function HomePage() {
   return (
     <>
-      <div className="homepage">
-        <h1>welcome to the riddle game HomePage</h1>
-        <a  href="/signin">login</a>
-        <a href="/signup">singUp</a>
-        <a href="/guest">Guost</a>
+    <div className="homepage">
+
+      <div className="h1-homepage">
+        <h1 >welcome to the riddle game HomePage</h1>
       </div>
+      <NavBar/>
+    </div>
       <Outlet />
     </>
   );
